@@ -103,7 +103,7 @@ Information on the date you entered
 	
 	if ($day == FALSE)
 	{
-		print "<p>Please enter a date.</p>";
+		print "<p style=\"position: relative; top: -235; left: 60;\">Please enter a date.</p>";
 	}
 	else if ($month == FALSE)
 	{
@@ -156,11 +156,11 @@ Information on the date you entered
 	
 	if (!is_numeric($year) || !is_numeric($month) || !is_numeric($day))
 	{
-		print "<p>Syntax error!</p>";
+		print "<p style=\"position: relative; top: -235; left: 60;\">Syntax error!</p>";
 	}
 	else if (($month > 12) || ($month < 0) || ($day > numDaysInMonth($month, $year)) || ($day < 0) || ($year > 9999) || ($year < 1))
 	{
-		print "<p>Invalid input!</p>";
+		print "<p style=\"position: relative; top: -235; left: 60;\">Invalid input!</p>";
 	}
 	else
 	{
@@ -183,7 +183,7 @@ Information on the date you entered
 		
 			$dayOfWeek = JDDayOfWeek($JDCount, 1);
 		
-			print "<p>" . $inDate . " is a " . $dayOfWeek . "</p>";
+			print "<p style=\"position: relative; top: -235; left: 60;\">" . $inDate . " is a " . $dayOfWeek . "</p>";
 			
 		}	
 		else if ($month != 0) // A month and a year have been given
