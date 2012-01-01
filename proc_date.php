@@ -46,7 +46,15 @@ Information on the date you entered
 	
 		for ($i=0; $i<$daysInMonth; $i++)
 		{
-			if ( (($i+1 == 25) && $aMonth == 12) || ((($i+$newLine) % 7) == 0) )
+			if ( (($i+1 == 25) && $aMonth == 12) )
+			{
+				print "<td width=\"14%\"><font color=\"#FF0000\">" . ($i+1) . "</font></td>";
+				if ((($i+1+$newLine) % 7) == 0)
+				{
+					print "</tr><tr>";
+				}
+			}
+			else if ((($i+$newLine) % 7) == 0)
 			{
 				print "<td width=\"14%\"><font color=\"#FF0000\">" . ($i+1) . "</font></td>";
 			}
